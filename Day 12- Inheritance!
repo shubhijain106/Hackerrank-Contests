@@ -1,0 +1,24 @@
+   class Grade extends Student{
+   private int sc;
+   Grade(String fname,String lname,int p,int score)
+   {
+         super(fname,lname,p);
+         sc=score;
+   }
+    public char calculate()
+    {
+       if(sc<40)
+           return 'D';
+       else if(sc>=40 && sc<60)
+         return 'B'; 
+       else if(sc>=40 && sc<60)
+         return 'B';
+       else if(sc>=60 && sc<75)
+         return 'A';
+       else if(sc>=75 && sc<90)
+         return 'E';
+       else
+           return 'O';
+    }
+       
+}

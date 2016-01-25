@@ -1,0 +1,30 @@
+ Difference(int[] elements)
+        {
+            this.elements=elements;
+        }
+        void computeDifference()
+        {
+            
+            int count=0;
+            if(elements.length==1)
+             maximumDifference=elements[0];
+            else if(elements.length==2)
+              maximumDifference=Math.abs(elements[0]-elements[1]);
+            else{
+                maximumDifference=0;
+                    for(int i=0;i<elements.length-1;i++)
+                    {
+                        for(int j=i+1;j<elements.length;j++)
+                        {
+                           //System.out.println(elements[i]+" "+elements[j]);
+                           int diff=Math.abs(elements[i]-elements[j]);
+                           count++;
+                           if(maximumDifference<diff)
+                               maximumDifference=diff;
+                        }
+                    }
+                    
+            }
+        }
+
+

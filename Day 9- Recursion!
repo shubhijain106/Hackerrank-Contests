@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String[] prts=sc.nextLine().split(" ");
+        
+        int gcd=find_gcd(Integer.parseInt(prts[0]),Integer.parseInt(prts[1]));
+        System.out.println(gcd);
+    }
+   static  int find_gcd(int a,int b){
+       
+       if(a==b)
+              return a;
+         else if(b>a)
+             return find_gcd(b-a,a);
+       else 
+          return find_gcd(a-b,b);
+      }
+}
